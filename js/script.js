@@ -37,6 +37,8 @@ createApp({
         
     },
     methods: {
-        
+        // doneToggle(index){
+        //     this.todoList[index].done = !this.todoList[index].done;
+        // },
     },
 }).mount('#app')
