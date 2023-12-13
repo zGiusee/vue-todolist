@@ -9,6 +9,12 @@
 }
 
 
+/* Cursor */
+
+.my-cursor{
+    cursor: pointer;
+}
+
 /* Buttons */
 
 .my-btn{
@@ -39,6 +45,10 @@
 
 .my-bg-green{
     background-color: rgb(74, 151, 74);
+}
+
+.my-bg-grey{
+    background-color: rgb(107, 107, 107);
 }
 
 .my-bg-red{
