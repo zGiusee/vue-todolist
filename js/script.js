@@ -37,8 +37,15 @@ createApp({
         
     },
     methods: {
-        // doneToggle(index){
-        //     this.todoList[index].done = !this.todoList[index].done;
-        // },
+        // DEFINISCO LA FUNZIONE CHE ELIMINA LE TASK DALLA LISTA CON CONFERMA
+        deleteTask(index){
+
+            let confirmation = confirm('Sei sicuro di voler eliminare questa task?')
+
+            if(confirmation){
+                this.todoList.splice(index,1);
+            }
+        },
+        
     },
 }).mount('#app')

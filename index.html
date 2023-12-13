@@ -58,11 +58,11 @@
                                             {{ task.text }}
                                         </div>
                                         <div>
-                                            <button class="my-btn mx-2 my-bg-green" @click="todoList[index].done = !todoList[index].done">
+                                            <button class="my-btn mx-2" :class="todoList[index].done == true ? 'my-bg-green' : 'bg-warning'" @click="todoList[index].done = !todoList[index].done">
                                                 <i class="fa-solid text-white" :class="todoList[index].done == true ? 'fa-check' : 'fa-times'"></i>
                                             </button>
 
-                                            <button class="my-btn mx-2 my-bg-red">
+                                            <button class="my-btn mx-2 my-bg-red" @click="deleteTask(index)">
                                                 <i class="fa-solid fa-trash text-white"></i>
                                             </button>
                                         </div>
