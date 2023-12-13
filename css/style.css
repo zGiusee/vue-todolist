@@ -3,3 +3,27 @@
     margin: 0;
     padding: 0;
 }
+
+*{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+/* List */
+
+.my-list li{
+    padding: 20px 10px;
+    margin: 10px;
+}
+
+/* Borders */
+
+.my-border{
+    border-top: 2px solid rgb(26, 26, 26);
+    border-bottom: 2px solid rgb(25, 25, 25);
+}
+
+/* Colors */
+.my-bg-black{
+    background-color: rgb(25, 25, 25);
+}
