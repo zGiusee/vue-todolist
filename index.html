@@ -48,14 +48,12 @@
 
                         <div class="m-5">
                             <!-- LIST -->
-                            <ul class="list-unstyled my-list">
+                            <ul class="list-unstyled my-list" v-for="(task, index) in todoList">
 
                                 <!-- LI ELEMENT -->
-                                <li class="my-border">
+                                <li class="my-border my-4">
                                     <div class="d-flex justify-content-between">
-                                        <div>
-                                            
-                                        </div>
+                                        <div class="mx-2" v-text="task.text"></div>
                                         <div>
                                             
                                         </div>
