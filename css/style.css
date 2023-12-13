@@ -9,6 +9,15 @@
 }
 
 
+/* Buttons */
+
+.my-btn{
+
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
 /* List */
 
 .my-list li{
@@ -26,4 +35,12 @@
 /* Colors */
 .my-bg-black{
     background-color: rgb(25, 25, 25);
+}
+
+.my-bg-green{
+    background-color: rgb(74, 151, 74);
+}
+
+.my-bg-red{
+    background-color: rgb(196, 57, 57);
 }
