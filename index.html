@@ -51,18 +51,18 @@
                             <ul class="list-unstyled my-list">
 
                                 <!-- LI ELEMENT -->
-                                <li class="my-border my-4 " v-for="(task, index) in todoList">
+                                <li class="my-border my-4 fs-5" v-for="(task, index) in todoList">
 
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="mx-2" :class="todoList[index].done == true ? 'text-decoration-line-through' : ''">
                                             {{ task.text }}
                                         </div>
                                         <div>
-                                            <button class="my-btn mx-2" :class="todoList[index].done == true ? 'my-bg-green' : 'bg-warning'" @click="todoList[index].done = !todoList[index].done">
+                                            <button class="my-btn mx-2 rounded" :class="todoList[index].done == true ? 'my-bg-green' : 'bg-warning'" @click="todoList[index].done = !todoList[index].done">
                                                 <i class="fa-solid text-white" :class="todoList[index].done == true ? 'fa-check' : 'fa-times'"></i>
                                             </button>
 
-                                            <button class="my-btn mx-2 my-bg-red" @click="deleteTask(index)">
+                                            <button class="my-btn mx-2 rounded my-bg-red" @click="deleteTask(index)">
                                                 <i class="fa-solid fa-trash text-white"></i>
                                             </button>
                                         </div>
@@ -71,6 +71,22 @@
                                 </li>
                                 <!-- END OF LI ELEMENT -->
                             </ul>
+                        </div>
+
+                        <!-- TASK LIST ADDING INPUT -->
+                        <div class="m-5 d-flex justify-content-between">
+                            <div class="w-75">
+                                <input 
+                                    type="text" 
+                                    name="newText" 
+                                    class="form-control border-1 border-black mx-3 py-3" 
+                                    v-model="newText" 
+                                    placeholder="Inserisci una nuova task"
+                                >
+                            </div>
+                            <div >
+                                <button class="my-btn my-bg-green text-white rounded py-3 mx-3" @click="addTask">Aggiungi Task</button>
+                            </div>
                         </div>
 
                     </div>

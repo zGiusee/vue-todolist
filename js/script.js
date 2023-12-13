@@ -5,6 +5,11 @@ createApp({
     data(){
         return {
 
+            // DEFINISCO LA VARIABILE CHE MI PERMETTA DI 
+            // RECUPERARE IL VARIABILE RICEVUTO DALL'INPUT 
+            newText: '',
+
+            // DEFINISCO L'ARRAY DI OGGETTI
             todoList: [
                 {
                     text: 'Fare la spesa',
@@ -45,6 +50,18 @@ createApp({
             if(confirmation){
                 this.todoList.splice(index,1);
             }
+        },
+        // DEFINISCO LA FUNZIONE CHE AGGIUNGA NUOVE TASK ALLA PAGINA
+        addTask(){
+
+            let obj = {
+                text: this.newText,
+                done: false
+            };
+
+            this.todoList.push(obj);
+
+            this.newText = '';
         },
         
     },
