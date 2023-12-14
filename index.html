@@ -54,11 +54,11 @@
                                 <li class="my-border my-4 fs-5" v-for="(task, index) in todoList">
 
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <div class="mx-2 col-6 my-cursor" @click="todoList[index].done = !todoList[index].done" :class="todoList[index].done == true ? 'text-decoration-line-through' : ''">
+                                        <div class="mx-2 col-6 my-cursor" @click="doneToggle(index)" :class="todoList[index].done == true ? 'text-decoration-line-through' : ''">
                                             {{ task.text }}
                                         </div>
                                         <div class="col-6 d-flex justify-content-end">
-                                            <button class="my-btn mx-2 rounded" :class="todoList[index].done == true ? 'my-bg-green' : 'my-bg-black'" @click="todoList[index].done = !todoList[index].done">
+                                            <button class="my-btn mx-2 rounded" :class="todoList[index].done == true ? 'my-bg-green' : 'my-bg-black'" @click="doneToggle(index)">
                                                 <i class="fa-solid text-white" :class="todoList[index].done == true ? 'fa-check' : 'fa-times'"></i>
                                             </button>
 
@@ -85,7 +85,7 @@
                                     placeholder="Inserisci una nuova task"
                                 >
                             </div>
-                            <div >
+                            <div>
                                 <button class="my-btn my-bg-green text-white rounded py-3 mx-3" @click="addTask">Aggiungi Task</button>
                             </div>
                         </div>

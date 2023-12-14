@@ -63,6 +63,10 @@ createApp({
 
             this.newText = '';
         },
+        // DEFINISCO LA FUNZIONE DEL DONE TOGGLE
+        doneToggle(index){
+            this.todoList[index].done = !this.todoList[index].done
+        }
         
     },
 }).mount('#app')
